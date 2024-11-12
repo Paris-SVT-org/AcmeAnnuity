@@ -50,16 +50,19 @@
 <dataSource containerAuthDataRef="AnnuityDBAuth" id="AnnuityDBDS" jdbcDriverRef="db2Driver" jndiName="AnnuityDBDS"> -->
         <!-- <properties databaseName="Annuity" driverType="4" portNumber="50000" serverName="test-acme-db-1.fyre.ibm.com"/> -->
     <!--    <properties serverName="${env.DBHost}" portNumber="${env.DBPort}" databaseName="${env.DBName}" driverType="4"/> 
-        <connectionManager connectionTimeout="60s" maxPoolSize="250" minPoolSize="10"/> -->
+        <connectionManager connectionTimeout="60s" maxPoolSize="250" minPoolSize="10"/> 
 </dataSource>  
+-->
+	
 <dataSource jndiName="AnnuityDBDS"  jdbcDriverRef="db2Driver" >
   <properties serverName="${env.DBHost}"
                       portNumber="${env.DBPort}"
                       databaseName="${env.DBName}"
                       sslConnection="true"
                       user="${env.DBUser}"
-	                    driverType="4"
+	              driverType="4"
                       password="${db-secret}"/>
+   <connectionManager connectionTimeout="60s" maxPoolSize="250" minPoolSize="10"/> 
 </dataSource>
 
 <!-- LDAP setting with secure 
