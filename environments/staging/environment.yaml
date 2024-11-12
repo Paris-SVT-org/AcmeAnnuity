@@ -24,9 +24,15 @@ app:
     cpu: 1
   java: 17
   # List of environment variables that are set for the application
-  #env:
-  #  - name: SOME_ENV_VAR_NAME
-  #   value: "some_env_var_value"
+  env:
+    - name: DBHost
+      value: ec2-35-153-18-9.compute-1.amazonaws.com
+    - name: DBPort
+      value: "60010"
+    - name: DBName
+      value: ANNUITY
+    - name: DBUser
+      value: db2inst1
 
   # List of variables that can be referenced in the server.xml
   #variables:
