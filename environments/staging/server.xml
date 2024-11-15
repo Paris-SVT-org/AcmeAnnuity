@@ -77,11 +77,12 @@
 -->	
 
 <!-- Change LDAP values to variables so openLDAP can be used -->	
+<!-- Comment out LDAP for EASe
 <ssl id="LDAPSSLSettings" keyStoreRef="ldaptruststore" trustStoreRef="ldaptruststore" />
 <keyStore id="ldaptruststore" location="/config/trustStore.jks" type="JKS" password="passw0rd" />
 <ldapRegistry host="${env.ldapHost}" baseDN="o=ibm,c=us" port="${env.ldapPort}" ldapType="IBM Tivoli Directory Server" id="LDAP_tdirsrv" sslEnabled="false" name="o=ldap1" sslRef="LDAPSSLSettings">
 </ldapRegistry> 
-	
+-->
 
 <!--  
 <ldapRegistry baseDN="o=ibm,c=us" bindDN="cn=root" bindPassword="{xor}Pm4nazI6MDQ=" host="isdsldapsvt2.rtp.raleigh.ibm.com" ldapType="IBM Tivoli Directory Server" port="389">
